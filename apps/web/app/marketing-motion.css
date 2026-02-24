@@ -1,0 +1,157 @@
+/* Landing page motion and workflow */
+.marketing-hero-copy {
+  animation: marketing-copy-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.marketing-product-frame {
+  transform-origin: center;
+  will-change: transform;
+}
+.marketing-workflow {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+  margin: 0 0 30px;
+  padding: 8px 0 4px;
+}
+.marketing-workflow-track {
+  position: absolute;
+  top: 25px;
+  left: 12.5%;
+  right: 12.5%;
+  height: 1px;
+  background: #dce6dc;
+  overflow: hidden;
+}
+.marketing-workflow-track span {
+  display: block;
+  width: 38%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #6f9877, transparent);
+  animation: workflow-travel 4.5s ease-in-out infinite;
+}
+.marketing-workflow-step {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  animation: workflow-rise 0.55s both;
+}
+.marketing-workflow-step:nth-of-type(2) {
+  animation-delay: 0.1s;
+}
+.marketing-workflow-step:nth-of-type(3) {
+  animation-delay: 0.22s;
+}
+.marketing-workflow-step:nth-of-type(4) {
+  animation-delay: 0.34s;
+}
+.marketing-workflow-step:nth-of-type(5) {
+  animation-delay: 0.46s;
+}
+.marketing-workflow-node {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  margin: 0 0 13px;
+  border: 1px solid #d8e4d8;
+  border-radius: 11px;
+  background: #f7faf6;
+  color: var(--green);
+  font: 700 15px Manrope;
+  box-shadow: 0 0 0 5px #f5f7f3;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.marketing-workflow-step:hover .marketing-workflow-node {
+  transform: translateY(-3px);
+  background: #eaf1eb;
+}
+.marketing-workflow-step > span {
+  color: #91a293;
+  font-size: 8px;
+  letter-spacing: 1px;
+  font-weight: 750;
+}
+.marketing-workflow-step h3 {
+  margin: 7px 0 4px;
+  color: #2a382d;
+  font: 700 12px Manrope;
+}
+.marketing-workflow-step p {
+  margin: 0;
+  color: #849084;
+  font-size: 9px;
+  line-height: 1.55;
+}
+.marketing-capability-grid article {
+  animation: workflow-rise 0.6s both;
+}
+.marketing-capability-grid article:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.marketing-capability-grid article:nth-child(3) {
+  animation-delay: 0.24s;
+}
+@keyframes marketing-copy-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes workflow-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes workflow-travel {
+  0% {
+    transform: translateX(-110%);
+  }
+  100% {
+    transform: translateX(290%);
+  }
+}
+@media (max-width: 650px) {
+  .marketing-workflow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 14px;
+    margin-bottom: 25px;
+  }
+  .marketing-workflow-track {
+    display: none;
+  }
+  .marketing-workflow-node {
+    margin-bottom: 9px;
+  }
+  .marketing-workflow-step h3 {
+    font-size: 11px;
+  }
+  .marketing-workflow-step p {
+    font-size: 8px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marketing-hero-copy,
+  .marketing-product-frame,
+  .marketing-workflow-step,
+  .marketing-capability-grid article {
+    animation: none !important;
+    transition: none !important;
+  }
+  .marketing-workflow-track span {
+    animation: none !important;
+    width: 100%;
+    transform: none;
+  }
+}

@@ -1,0 +1,29 @@
+@layer components {
+  .ui-card {
+    @apply rounded-xl border border-lumix-line bg-white p-4;
+  }
+
+  .ui-button {
+    @apply inline-flex min-h-9 items-center justify-center gap-2 rounded-lg px-3 text-sm font-semibold transition-colors disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .ui-button-primary {
+    @apply bg-lumix-green text-white hover:bg-lumix-green-dark;
+  }
+
+  .ui-button-secondary {
+    @apply border border-lumix-line bg-white text-lumix-green hover:bg-lumix-green-soft;
+  }
+
+  .ui-field {
+    @apply min-h-10 w-full rounded-lg border border-lumix-line bg-white px-3 py-2 text-sm text-lumix-ink outline-none placeholder:text-lumix-muted focus:border-lumix-green focus:ring-2 focus:ring-lumix-green-soft;
+  }
+
+  .ui-label {
+    @apply mb-1.5 block text-xs font-semibold text-lumix-ink;
+  }
+
+  .ui-badge {
+    @apply inline-flex items-center rounded-full bg-lumix-green-soft px-2.5 py-1 text-xs font-medium text-lumix-green;
+  }
+}

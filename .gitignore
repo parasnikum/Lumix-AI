@@ -1,0 +1,133 @@
+# ============================================================
+# Lumix — local files, secrets, generated output
+# Keep source code, migrations, lockfiles, and public assets tracked.
+# ============================================================
+
+# Environment files and local secrets
+.env
+.env.*
+!.env.example
+!.env.*.example
+!.env*.example
+.envrc
+.secrets/
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.hypothesis/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+.pytype/
+.dmypy.json
+.mypy_cache/
+pip-wheel-metadata/
+*.egg
+*.egg-info/
+.eggs/
+wheels/
+share/python-wheels/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+apps/api/venv/
+apps/api/.venv/
+
+# Node.js / package managers
+node_modules/
+.npm/
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+
+# Next.js / frontend build output
+.next/
+out/
+dist/
+build/
+.next/
+.vercel/
+.turbo/
+*.tsbuildinfo
+next-env.d.ts.tmp
+
+# Test, coverage, and browser automation output
+coverage/
+.nyc_output/
+playwright-report/
+test-results/
+blob-report/
+.vitest/
+*.lcov
+
+# Runtime data and local databases (never commit user uploads or DB files)
+data/
+storage/
+uploads/
+chroma/
+chroma_data/
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-*
+
+# Logs and diagnostic output
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.stackdump
+
+# Local certificates, private keys, and credentials
+*.pem
+*.p12
+*.pfx
+*.key
+.secrets.*
+credentials*.json
+service-account*.json
+
+# Local tool / editor state
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.classpath
+.settings/
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100/
+.Trashes/
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Temporary files
+.tmp/
+.temp/
+tmp/
+temp/
+*.bak
+*.tmp
+*.orig

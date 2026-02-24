@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+@import "./marketing-motion.css";
+@import "./legacy.css" layer(components);
+@import "./components/theme-overrides.css";
+@import "./components/chat-layout-fixes.css" layer(components);
+@import "./styles/components.css";
+
+@source "./**/*.{js,ts,jsx,tsx,mdx}";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-display: "Manrope", sans-serif;
+  --color-lumix-green: #426b54;
+  --color-lumix-green-dark: #345740;
+  --color-lumix-green-soft: #eaf1eb;
+  --color-lumix-ink: #20251f;
+  --color-lumix-muted: #7b8279;
+  --color-lumix-line: #e8ebe5;
+  --color-lumix-canvas: #f4f5f2;
+  --color-lumix-panel: #ffffff;
+}
